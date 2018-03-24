@@ -32,12 +32,13 @@
 .contents {
   width: 48%;
   margin-top: -6%;
+  h3 {
+    margin-top: 1em;
+    margin-bottom: 0.75em;
+  }
   @media only screen and (min-width: $cut) {
     float: left;
     // margin-left: 0;
-  }
-  h3 {
-    margin-bottom: 0.75em;
   }
   &.right {
     @media only screen and (min-width: $cut) {
@@ -93,20 +94,14 @@
   transition: color 0.3s ease-out,
               background-color 0.3s ease-out,
               border-color 0.3s ease-out;
-  &:hover {
+  &:hover, &:active {
     background-color: $syntax-mono;
     color: #fff;
-    border-color: $syntax-mono;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
-  }
-  &:active {
-    background-color: $syntax-mono;
-    color: #fff;
-    border-color: $syntax-mono;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
+    border-color: darken($syntax-mono, 10%);
+    text-shadow: 0 1px 2px $syntax-bg;
+    transition: background-color 0.3s ease-in-out,
+                color 0.3s ease-in-out,
+                border-color 0.3s ease-in-out,
+                text-shadow 0.35s ease-in-out;
   }
 }
