@@ -1,23 +1,25 @@
 {
-  "name": "particle",
+  "name": "atomic-monokai-pro-website",
   "version": "1.0.0",
-  "description": "",
+  "description": "A website for Atomic Monokai Pro",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Nathan Randecker",
-  "license": "ISC",
+  "author": "Brett Stevenson",
+  "license": "MIT",
   "dependencies": {
     "browser-sync": "^2.18.6",
     "devicon": "^2.0.0",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^2.0.0",
     "gulp-imagemin": "^3.1.1",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.0.0"
+    "gulp-uglify": "^2.0.0",
+    "gulp-uncss": "^1.0.6"
   }
 }
