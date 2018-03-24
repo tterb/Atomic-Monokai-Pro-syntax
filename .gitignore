@@ -1,0 +1,19 @@
+_site
+.sass-cache
+node_modules
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# OS X
+.DS_Store
+.Spotlight-V100
+.Trashes
+._*
+
+# Other
+**/img/unused/*
+*.ai
+*.psd
+*_.*
