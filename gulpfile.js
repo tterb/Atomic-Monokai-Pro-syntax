@@ -1,12 +1,14 @@
-var gulp = require('gulp');
-var csso = require('gulp-csso');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var sass = require('gulp-sass');
-var plumber = require('gulp-plumber');
-var cp = require('child_process');
-var imagemin = require('gulp-imagemin');
-var browserSync = require('browser-sync');
+var gulp = require('gulp'),
+    csso = require('gulp-csso'),
+    uncss = require('gulp-uncss'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat'),
+    sass = require('gulp-sass'),
+    plumber = require('gulp-plumber'),
+    cp = require('child_process'),
+    imagemin = require('gulp-imagemin'),
+    browserSync = require('browser-sync'),
+    autoprefixer = require('gulp-autoprefixer');
 
 var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
 
@@ -41,10 +43,15 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
 * Compile and minify sass
 */
 gulp.task('sass', function() {
-  // gulp.src('src/styles/**/*.scss')
-  gulp.src('_sass/**/*.scss')
+  gulp.src('src/styles/**/*.scss')
+  // gulp.src('_sass/**/*.scss')
     .pipe(plumber())
     .pipe(sass())
+    .pipe(autoprefixer())
+    // .pipe(uncss({
+    //   html: ['_site/**/*.html'],
+    //   ignore: []
+    // }))
     .pipe(csso())
     .pipe(gulp.dest('assets/css/'));
 });
@@ -80,8 +87,8 @@ gulp.task('js', function(){
 });
 
 gulp.task('watch', function() {
-  // gulp.watch('src/styles/**/*.scss', ['sass', 'jekyll-rebuild']);
-  gulp.watch('_sass/**/*.scss', ['sass', 'jekyll-rebuild']);
+  gulp.watch('src/styles/**/*.scss', ['sass', 'jekyll-rebuild']);
+  // gulp.watch('_sass/**/*.scss', ['sass', 'jekyll-rebuild']);
   gulp.watch('src/js/**/*.js', ['js']);
   gulp.watch('src/fonts/**/*.{tff,woff,woff2}', ['fonts']);
   gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
