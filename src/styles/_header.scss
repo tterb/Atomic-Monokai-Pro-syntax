@@ -116,18 +116,17 @@
   margin: 0 auto;
   cursor: pointer;
   .icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      fill: $syntax-bg;
-      transform: translate(-50%, -50%);
-      transform-style: preserve-3d;
-      animation: bounce 2s infinite;
-      &:hover {
-        color: $syntax-magenta;
-      }
-      &:active {
-        color: $sec;
-      }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    fill: $syntax-bg;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    animation: bounce 2s infinite;
+    &:hover, &:active  {
+      color: $syntax-magenta;
+      transform: none;
+      animation: none;
+    }
   }
 }
