@@ -1,0 +1,35 @@
+<div class="section-contents">
+  <h1> About </h1>
+  <p>Atomic Monokai Pro features a modern interpretation of the popular monokai color palette. Based on the <a href="https://www.monokai.pro/" target="_blank">Monokai Pro</a> syntax-theme for Sublime Text and VSCode, this adaptated theme brings the same familiar syntax-theme with many great renovations to <a href="https://atom.io" target="_blank">Atom</a>.</p>
+</div>
+<section class="color-palette">
+  {% for color in site.data.colors %}
+    <div id="{{ color.title }}" class="color-item" style="background:{{ color.value }}"><span class="color-value" style="color:{{ color.value }}">{{ color.value }}</span></div>
+  {% endfor %}
+</section>
+<!-- <div class="user">
+  <div class="tech">
+    <h2>Design</h2>
+    <i class="devicon-html5-plain-wordmark"></i>
+    <i class="devicon-bootstrap-plain-wordmark colored"></i>
+    <i class="devicon-sass-original colored"></i>
+    <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
+      Vinyl XOXO lumbersexual</p>
+  </div>
+  <div class="tech">
+    <h2>Code</h2>
+    <i class="devicon-javascript-plain colored"></i>
+    <i class="devicon-react-original-wordmark colored"></i>
+    <i class="devicon-nodejs-plain-wordmark"></i>
+    <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
+      Vinyl XOXO lumbersexual</p>
+  </div>
+  <div class="tech">
+    <h2>Tools</h2>
+    <i class="devicon-git-plain"></i>
+    <i class="devicon-gulp-plain colored"></i>
+    <i class="devicon-atom-original-wordmark"></i>
+    <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
+      Vinyl XOXO lumbersexual</p>
+  </div>
+</div> -->

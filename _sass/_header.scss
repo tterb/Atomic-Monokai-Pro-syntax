@@ -1,0 +1,133 @@
+#particles-js {
+  background: $main;
+  display: flex;
+  vertical-align: bottom;
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .particles-js-canvas-el {
+    width:100% !important;
+    height:100vh !important;
+  }
+}
+
+.header {
+  position: absolute;
+  color: $syntax-bg;
+  text-align: center;
+  top: 42.5%;
+  left: 50%;
+  width: 95% !important;
+  margin: 0 auto;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  h1 {
+    width: 60% !important;
+    margin: 0 auto 0.55em;
+    padding-top: 0.5em !important;
+  }
+  .site-title {
+    display: block;
+    color: $syntax-bg;
+    font-size: 40px;
+    line-height: 1;
+    @media only screen and (min-width:$cut){
+      margin: 0;
+      font-size: 80px;
+    }
+  }
+  .site-description {
+    display: block;
+    font-size: 20px;
+    color: $syntax-bg;
+    line-height: 1;
+    margin-top: 10px;
+    @media only screen and (min-width:$cut){
+      font-size: 40px;
+    }
+  }
+  img {
+    width: 85%;
+    height: auto;
+    margin:10px auto 0;
+  }
+}
+
+.header-links {
+  margin: 10px;
+  .link {
+    color: $syntax-bg;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 10px;
+    @media only screen and (min-width:$cut){
+      font-size: 20px;
+    }
+  }
+}
+
+.header-icons {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  .icon {
+    text-align: center;
+    color: $syntax-bg;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2px solid $syntax-bg;
+    transition: all .7s;
+    &:hover {
+      color: $main;
+      background: $syntax-bg;
+    }
+    &:active {
+      color: $main;
+      background: $syntax-bg;
+    }
+    @media only screen and (min-width:$cut) {
+      font-size: 35px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+.scroll-btn {
+  display: block;
+  position: absolute;
+  color: $syntax-bg;
+  font-size: 30px;
+  text-align: center;
+  bottom: 85px;
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+  .icon {
+      position: absolute;
+      top: 50%;
+      left: 45.5%;
+      width: 100px;
+      height: 100px;
+      fill: $syntax-bg;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-animation: pulse 1.3s infinite;
+      animation: pulse 1.3s infinite;
+      &:hover {
+        color: $syntax-magenta;
+      }
+      &:active {
+        color: $sec;
+      }
+  }
+}

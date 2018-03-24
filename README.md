@@ -1,38 +1,74 @@
-# Atomic Monokai Pro  
+# Particle Jekyll Theme
 
-<!-- Badges -->
-<p align="right">
-  <a href="https://atom.io/themes/atomic-design-ui">
-    <img src="https://img.shields.io/apm/v/atomic-monokai-pro-syntax.svg?" height="21" title="Version">&nbsp;
-  </a>
-  <a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/apm/l/atomic-monokai-pro-syntax.svg?" height="21" title="License">&nbsp;
-  </a>
-    <img src="https://img.shields.io/apm/dm/atomic-monokai-pro-syntax.svg?maxAge=2592000?" height="21" title="Downloads">&nbsp;
-  <a href="https://atom.io/themes/atomic-monokai-pro-syntax">
-    <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" height="21" title="Open Source">&nbsp;
-  </a>
-</p>
+![](./particle.jpg)
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/16360374/35130498-07363c66-fc76-11e7-99c9-9bd7844ab1be.png" alt="preview" width="820"/>
-</p>  
+This is a simple and minimalist template for Jekyll designed for developers that want to show of their portfolio.
 
-[**Atomic Monokai Pro**](https://atom.io/themes/atomic-monokai-pro-syntax) features a modern interpretation of the popular monokai color palette. Based on the [Monokai Pro](https://www.monokai.pro/) syntax-theme for Sublime Text and VSCode, this adaptated theme brings the same great renovations to [Atom](atom.io).  
-Additionally, this theme also features modifications to better emphasize crucial code, while allowing more trivial aspects of the syntax to fade into the background. In turn, allowing for easier and more effective analysis and visual-grepping.  
+The Theme features:
 
-<br>  
+- Gulp
+- SASS
+- Sweet Scroll
+- Particle.js
+- BrowserSync
+- Font Awesome and Devicon icons
+- Google Analytics
+- Info Customization
 
-## Install
+## Basic Setup
 
-This theme can be installed from within Atom or via the command: 
-```sh
-$ apm install atomic-monokai-pro-syntax 
+1. [Install Jekyll](http://jekyllrb.com)
+2. Fork the [Particle Theme](https://github.com/nrandecker/particle/fork)
+3. Clone the repo you just forked.
+4. Edit `_config.yml` to personalize your site.
+
+## Site and User Settings
+
+You have to fill some informations on `_config.yml` to customize your site.
+
 ```
-After installation, you can activated by going to the **Settings > Themes** section and selecting it from the **Syntax Themes** drop-down menu.  
+# Site settings
+description: A blog about lorem ipsum dolor sit amet
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://localhost:3000" # the base hostname & protocol for your site
 
-<br>
+# User settings
+username: Lorem Ipsum
+user_description: Anon Developer at Lorem Ipsum Dolor
+user_title: Anon Developer
+email: anon@anon.com
+twitter_username: lorem_ipsum
+github_username:  lorem_ipsum
+gplus_username:  lorem_ipsum
+```
 
---------
+**Don't forget to change your url before you deploy your site!**
 
-[![apm badge](https://apm-badges.herokuapp.com/apm/atomic-monokai-pro-syntax.svg?theme=one-dark)](https://atom.io/themes/atomic-monokai-pro-syntax)
+## Color and Particle Customization
+- Color Customization
+  - Edit the sass variables
+- Particle Customization
+  - Edit the json data in particle function in app.js
+  - Refer to [Particle.js](https://github.com/VincentGarreau/particles.js/) for help
+
+## Running the blog in local
+
+In order to compile the assets and run Jekyll on local you need to follow those steps:
+
+- Install [NodeJS](https://nodejs.org/)
+- Run `npm install`
+- Run `gulp`
+
+## Questions
+
+Having any issues file a [GitHub Issue](https://github.com/nrandecker/particle/issues/new).
+
+## License
+
+This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme anyway you want.
+
+## Credits
+
+This theme was partially designed with the inspiration from these fine folks
+- [Willian Justen](https://github.com/willianjusten/will-jekyll-template)
+- [Vincent Garreau](https://github.com/VincentGarreau/particles.js/)

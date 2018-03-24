@@ -1,24 +1,23 @@
 {
-  "name": "atomic-monokai-pro-syntax",
-  "theme": "syntax",
-  "version": "1.2.2",
-  "description": "An adaptation of the Monokai Pro syntax-theme for Atom",
-  "keywords": [
-    "dark",
-    "monokai",
-    "pro",
-    "monokai-pro",
-    "syntax"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JonSn0w/Atomic-Monokai-Pro-syntax.git"
+  "name": "particle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bugs": {
-    "url": "https://github.com/JonSn0w/Atomic-Monokai-Pro-syntax/issues"
-  },
-  "license": "MIT",
-  "engines": {
-    "atom": ">0.50.0"
+  "author": "Nathan Randecker",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.6",
+    "devicon": "^2.0.0",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.0"
   }
 }
