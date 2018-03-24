@@ -15,6 +15,9 @@ github: https://github.com/JonSn0w/atomic-monokai-pro
 atom: https://atom.io/packages/atomic-monokai-pro-syntax
 # gplus_username:  lorem_ipsum
 
+plugins:
+- jekyll-autoprefixer
+
 # Google-analytics
 google-analytics:
   id: ""
