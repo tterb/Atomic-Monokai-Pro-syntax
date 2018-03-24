@@ -3,12 +3,13 @@
   color: rgba(#fff, 0.85);
   text-align: center;
   min-height: 10vh;
+  box-shadow: 0 -1.5px 4px rgba(0,0,0,0.4);
   margin-top: 100px;
   padding: 20px 0;
   .fa-code::before {
     color: $syntax-blue;
   }
-  .love {
+  .fa-heart::before {
     color: #ef6d6d;
   }
   
@@ -20,11 +21,9 @@
     color: rgba(#fff, 0.95);
     text-decoration: none;
     margin: 0;
-    &:hover{
-      color: $accent;
-    }
-    &:active {
-      color: $accent;
+    &:hover, &:active {
+      color: $syntax-green;
+      border-color: $syntax-green;
     }
   }
 }
