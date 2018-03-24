@@ -1,21 +1,30 @@
 .footer {
-  background: $main;
-  padding: 10px 0;
-  margin-top: 100px;
+  background: $syntax-bg;
+  color: rgba(#fff, 0.85);
   text-align: center;
-  color: #fff;
-  .love {
-    color: red;
+  min-height: 10vh;
+  margin-top: 100px;
+  padding: 20px 0;
+  .fa-code::before {
+    color: $syntax-blue;
   }
+  .love {
+    color: #ef6d6d;
+  }
+  
+  p {
+    margin-top: 2em;
+  }
+  
   a {
+    color: rgba(#fff, 0.95);
     text-decoration: none;
     margin: 0;
-    color: #fff;
     &:hover{
-      color: $sec;
+      color: $accent;
     }
     &:active {
-      color: $sec;
+      color: $accent;
     }
   }
 }

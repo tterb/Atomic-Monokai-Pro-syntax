@@ -1,4 +1,4 @@
-#particles-js {
+#banner {
   background: $main;
   display: flex;
   vertical-align: bottom;
@@ -7,49 +7,64 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  .particles-js-canvas-el {
-    width:100% !important;
-    height:100vh !important;
-  }
+  // .particles-js-canvas-el {
+  //   width: 100% !important;
+  //   height: 100vh !important;
+  // }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translate(0); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
 }
 
 .header {
   position: absolute;
-  color:#fff;
+  color: $syntax-bg;
   text-align: center;
-  top: 25%;
+  top: 42.5%;
   left: 50%;
-  width: 75%;
+  width: 95% !important;
   margin: 0 auto;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 1;
+  h1 {
+    width: 60% !important;
+    margin: 0 auto 0.55em;
+    padding-top: 0.5em !important;
+  }
   .site-title {
-    font-size: 50px;
     display: block;
+    color: $syntax-bg;
+    font-size: 40px;
     line-height: 1;
-    color: #fff;
     @media only screen and (min-width:$cut){
       margin: 0;
-      font-size: 100px;
+      font-size: 80px;
     }
   }
   .site-description {
-    font-size: 20px;
     display: block;
+    font-size: 20px;
+    color: $syntax-bg;
     line-height: 1;
-    color: #fff;
     margin-top: 10px;
     @media only screen and (min-width:$cut){
       font-size: 40px;
     }
+  }
+  img {
+    width: 85%;
+    height: auto;
+    margin:10px auto 0;
   }
 }
 
 .header-links {
   margin: 10px;
   .link {
-    color: #fff;
+    color: $syntax-bg;
     text-decoration: none;
     font-size: 15px;
     margin: 10px;
@@ -65,56 +80,51 @@
   text-align: center;
   .icon {
     text-align: center;
-    color: #fff;
+    color: $syntax-bg;
     width: 20px;
     height: 20px;
     font-size: 20px;
     padding: 10px;
     margin: 5px;
     border-radius: 50%;
-    border: 2px solid #fff;
+    border: 2px solid $syntax-bg;
     transition: all .7s;
     &:hover {
       color: $main;
-      background: #fff;
+      background: $syntax-bg;
     }
     &:active {
       color: $main;
-      background: #fff;
+      background: $syntax-bg;
     }
     @media only screen and (min-width:$cut) {
+      font-size: 35px;
       width: 35px;
       height: 35px;
-      font-size: 35px;
     }
   }
 }
 
-.down {
-  color: #fff;
+.scroll-btn {
+  display: block;
   position: absolute;
-  bottom: 25px;
+  color: $syntax-bg;
+  font-size: 30px;
+  text-align: center;
+  bottom: 85px;
   width: 100%;
   margin: 0 auto;
-  display: block;
-  text-align: center;
-  font-size: 30px;
   cursor: pointer;
   .icon {
       position: absolute;
-      -webkit-transform-style: preserve-3d;
-      transform-style: preserve-3d;
       top: 50%;
       left: 50%;
-      -webkit-transform: translate(-50%, -50%);
+      fill: $syntax-bg;
       transform: translate(-50%, -50%);
-      width: 100px;
-      height: 100px;
-      fill: #fff;
-      -webkit-animation: pulse 1.3s infinite;
-      animation: pulse 1.3s infinite;
+      transform-style: preserve-3d;
+      animation: bounce 2s infinite;
       &:hover {
-        color: $sec;
+        color: $syntax-magenta;
       }
       &:active {
         color: $sec;

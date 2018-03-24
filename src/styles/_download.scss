@@ -1,0 +1,55 @@
+.download-section {
+  width: 75%;
+  margin: auto;
+}
+
+#download {
+  h1 {
+    margin-bottom: 1em;
+  }
+}
+
+.download-buttons {
+  width: 72.5%;
+  margin: 0 auto;
+}
+
+.download-btn {
+  display: inline-block;
+  background-color: lighten($syntax-bg, 5%);
+  color: #fff;
+  font-size: 115%;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid lighten($syntax-bg, 15%);
+  border-radius: 100px;
+  width: auto;
+  outline: none;
+  margin: 10px;
+  padding: 9px 20px 9px 15px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: color 0.3s ease-out,
+              background-color 0.3s ease-out,
+              border-color 0.3s ease-out;
+  &:hover, &:active {
+    background-color: lighten($syntax-mono, 5%);
+    color: #fff;
+    border-color: darken($syntax-mono, 5%);
+    text-shadow: 0 1px 2px $syntax-bg;
+    transition: background-color 0.3s ease-in-out,
+                color 0.3s ease-in-out,
+                border-color 0.3s ease-in-out,
+                text-shadow 0.35s ease-in-out;
+  }
+  .icon {
+    vertical-align: middle;
+    &::before {
+      font-size: 1.25em;
+      margin-right: 5px;
+    }
+  }
+  .fa::before {
+    font-size: 1em !important;
+  }
+}

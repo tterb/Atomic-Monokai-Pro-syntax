@@ -1,44 +1,63 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    line-height: 1.5;
-    color: #555;
-    font-family: 'Montserrat', sans-serif;
+  background: #fdfdfa;
+  color: rgba(#000, 0.7);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 article, aside, figcaption, figure, footer, header, nav, section {
-    display: block;
+  display: block;
 }
-h1, h2, h3, h4, stong {
-    margin-top: 1em;
-    padding-top: 1em;
-    line-height: 1.25;
-    color: #333;
+h1, h2, h3, h4, strong {
+  color: #333;
+  line-height: 1.25;
+  margin-top: 0;
+  padding-top: 1em;
 }
 h1 {
-    font-size: 2.5rem;
+  font-size: 3rem;
 }
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 h3 {
-    font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 h4 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 ul, ol {
-    margin: 1em 0;
-    padding-left: 40px;
+  margin: 1em 0;
+  padding-left: 40px;
 }
 p, figure {
-    margin: 1em 0;
+  margin: 1em 0;
 }
 a img {
-    border: none;
+  border: none;
 }
 sup, sub {
-    line-height: 0;
+  line-height: 0;
+}
+
+p {
+  font-size: 95%;
+  a {
+    color: #333;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 350ms ease-in-out;
+    &:hover, &:active {
+      color: $syntax-magenta;
+      border-bottom: 2px dotted $syntax-magenta;
+    }
+  }
+}
+
+.page-section {
+  margin-top: 3em !important;
 }
