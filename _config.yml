@@ -9,8 +9,6 @@ title: Atomic Monokai Pro
 description: A modern interpretation of the popular monokai color palette.
 developer: Brett Stevenson
 email: brettstevenson.io/contact
-baseurl: "/atomic-monokai-pro-syntax" # the subpath of your site
-url: "" # the base hostname & protocol for the site
 
 github: https://github.com/JonSn0w/atomic-monokai-pro-syntax
 atom: https://atom.io/packages/atomic-monokai-pro-syntax
