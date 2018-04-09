@@ -7,12 +7,12 @@ $syntax-blue:     hsl(188, 70%, 73%);
 $syntax-yellow:   hsl( 40, 98%, 76%);
 $syntax-purple:   hsl(246, 80%, 80%);
 $syntax-orange:   hsl( 21, 86%, 70%);
-$syntax-red:      hsl(  5, 48%, 51%); 
+$syntax-red:      hsl(  5, 48%, 51%);
 $syntax-mono:     hsl(270, 8%, 43%);
 $syntax-mono2:    hsl(270, 9%, 60%);
 
 $main: desaturate(lighten($syntax-fg, 14%), 4%);
-$main: #fdfdfa;
+$main: #fdfdfb;
 $sec: #4B5664;
 $accent: $syntax-magenta;
 $purple: #54516A;

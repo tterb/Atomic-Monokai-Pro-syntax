@@ -1,29 +1,30 @@
 .footer {
   background: $syntax-bg;
   color: rgba(#fff, 0.85);
+  font-size: 1.1em;
   text-align: center;
   min-height: 10vh;
   box-shadow: 0 -1.5px 4px rgba(0,0,0,0.4);
   margin-top: 100px;
   padding: 20px 0;
-  .fa-code::before {
-    color: $syntax-blue;
-  }
-  .fa-heart::before {
-    color: #ef6d6d;
-  }
-  
   p {
-    margin-top: 2em;
-  }
-  
-  a {
-    color: rgba(#fff, 0.95);
-    text-decoration: none;
-    margin: 0;
-    &:hover, &:active {
-      color: $syntax-green;
-      border-color: $syntax-green;
+    letter-spacing: 0.5px;
+    margin: 1.5em 0 1.35em;
+    a {
+      color: rgba(#fff, 0.95);
+      text-decoration: none;
+      margin: 0;
+      &:hover, &:active {
+        color: $syntax-green;
+        // border-color: $syntax-green;
+        border: none;
+      }
+    }
+    .fa-code::before {
+      color: $syntax-blue;
+    }
+    .fa-heart::before {
+      color: #ef6d6d;
     }
   }
 }

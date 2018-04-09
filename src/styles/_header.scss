@@ -7,10 +7,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  // .particles-js-canvas-el {
-  //   width: 100% !important;
-  //   height: 100vh !important;
-  // }
 }
 
 @keyframes bounce {
@@ -23,7 +19,7 @@
   position: absolute;
   color: $syntax-bg;
   text-align: center;
-  top: 42.5%;
+  top: 42%;
   left: 50%;
   width: 95% !important;
   margin: 0 auto;
@@ -32,32 +28,33 @@
   h1 {
     width: 60% !important;
     margin: 0 auto 0.55em;
-    padding-top: 0.5em !important;
+    padding-top: 0 !important;
   }
   .site-title {
     display: block;
     color: $syntax-bg;
     font-size: 40px;
     line-height: 1;
-    @media only screen and (min-width:$cut){
+    @media only screen and (min-width:$cut) {
+      // font-size: 80px;
+      font-size: 9vw;
       margin: 0;
-      font-size: 80px;
     }
   }
   .site-description {
     display: block;
-    font-size: 20px;
     color: $syntax-bg;
+    font-size: 20px;
     line-height: 1;
     margin-top: 10px;
-    @media only screen and (min-width:$cut){
+    @media only screen and (min-width:$cut) {
       font-size: 40px;
     }
   }
   img {
     width: 85%;
     height: auto;
-    margin:10px auto 0;
+    margin:1em auto 0;
   }
 }
 
@@ -68,7 +65,7 @@
     text-decoration: none;
     font-size: 15px;
     margin: 10px;
-    @media only screen and (min-width:$cut){
+    @media only screen and (min-width:$cut) {
       font-size: 20px;
     }
   }
@@ -76,26 +73,26 @@
 
 .header-icons {
   display: flex;
-  justify-content: center;
   text-align: center;
+  justify-content: center;
   .icon {
-    text-align: center;
     color: $syntax-bg;
+    font-size: 20px;
+    text-align: center;
     width: 20px;
     height: 20px;
-    font-size: 20px;
     padding: 10px;
     margin: 5px;
     border-radius: 50%;
     border: 2px solid $syntax-bg;
     transition: all .7s;
     &:hover {
-      color: $main;
       background: $syntax-bg;
+      color: $main;
     }
     &:active {
-      color: $main;
       background: $syntax-bg;
+      color: $main;
     }
     @media only screen and (min-width:$cut) {
       font-size: 35px;
@@ -108,17 +105,17 @@
 .scroll-btn {
   display: block;
   position: absolute;
-  color: $syntax-bg;
-  font-size: 30px;
+  color: rgba($syntax-bg, 0.75);
+  font-size: 40px;
   text-align: center;
-  bottom: 85px;
+  bottom: 70px;
   width: 100%;
   margin: 0 auto;
   cursor: pointer;
   .icon {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48.5%;
     fill: $syntax-bg;
     transform: translate(-50%, -50%);
     transform-style: preserve-3d;
