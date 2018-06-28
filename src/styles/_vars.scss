@@ -11,7 +11,7 @@ $syntax-red:      hsl(  5, 48%, 51%);
 $syntax-mono:     hsl(270, 8%, 43%);
 $syntax-mono2:    hsl(270, 9%, 60%);
 
-$main: desaturate(lighten($syntax-fg, 14%), 4%);
+// $main: desaturate(lighten($syntax-fg, 14%), 4%);
 $main: #fdfdfb;
 $sec: #4B5664;
 $accent: $syntax-magenta;

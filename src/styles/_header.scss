@@ -37,8 +37,7 @@
     font-size: 40px;
     line-height: 1;
     @media only screen and (min-width:$cut) {
-      // font-size: 80px;
-      font-size: 9vw;
+      font-size: 8vw;
       margin: 0;
     }
   }
@@ -136,7 +135,7 @@
   .icon {
     position: absolute;
     top: 50%;
-    left: 49%;
+    left: 48.5%;
     fill: $syntax-bg;
     transform: translate(-50%, -50%);
     transform-style: preserve-3d;
