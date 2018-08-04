@@ -1,14 +1,16 @@
-var gulp = require('gulp'),
-    csso = require('gulp-csso'),
-    uncss = require('gulp-uncss'),
-    uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
-    sass = require('gulp-sass'),
-    plumber = require('gulp-plumber'),
-    cp = require('child_process'),
-    imagemin = require('gulp-imagemin'),
-    browserSync = require('browser-sync'),
-    autoprefixer = require('gulp-autoprefixer');
+const gulp = require('gulp'),
+      run = require('gulp-run'),
+      gutil = require('gulp-util'),
+      cssnano = require('cssnano'),
+      cp = require('child_process'),
+      uglify = require('gulp-uglify'),
+      concat = require('gulp-concat'),
+      sass = require('gulp-ruby-sass'),
+      plumber = require('gulp-plumber'),
+      postcss = require('gulp-postcss'),
+      imagemin = require('gulp-imagemin'),
+      browserSync = require('browser-sync').create(),
+      autoprefixer = require('autoprefixer');
 
 var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
 
@@ -17,8 +19,9 @@ var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
  * runs a child process in node that runs the jekyll commands
  */
 gulp.task('jekyll-build', function (done) {
-  return cp.spawn(jekyllCommand, ['build'], {stdio: 'inherit'})
-    .on('close', done);
+  return gulp.src('')
+    .pipe(run('bundle exec jekyll build --config _config.yml'))
+    .on('error', gutil.log);
 });
 
 /*
@@ -32,10 +35,12 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
  * Build the jekyll site and launch browser-sync
  */
 gulp.task('browser-sync', ['jekyll-build'], function() {
-  browserSync({
-    server: {
-      baseDir: '_site'
-    }
+  browserSync.init({
+    server: '_site/',
+    ghostMode: false,   // Toggle to mirror clicks, reloads etc (performance)
+    logFileChanges: true,
+    logLevel: 'debug',
+    open: true         // Toggle to auto-open page when starting
   });
 });
 
@@ -43,17 +48,14 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
 * Compile and minify sass
 */
 gulp.task('sass', function() {
-  gulp.src('src/styles/**/*.scss')
-  // gulp.src('_sass/**/*.scss')
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(autoprefixer())
-    // .pipe(uncss({
-    //   html: ['_site/**/*.html'],
-    //   ignore: []
-    // }))
-    .pipe(csso())
-    .pipe(gulp.dest('assets/css/'));
+  return sass('src/styles/main.scss', {
+    style: 'compressed',
+    trace: true,
+    loadPath: ['src/styles/']
+  }).pipe(postcss([autoprefixer({ browsers: ['last 2 versions']}), cssnano()]))
+    .pipe(gulp.dest('assets/css/'))
+    .pipe(browserSync.stream())
+    .on('error', gutil.log);
 });
 
 /*
