@@ -1,6 +1,8 @@
 _site
 .sass-cache
 node_modules
+Gemfile.lock
+package-lock.json
 
 # Windows
 Thumbs.db
