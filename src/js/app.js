@@ -1,18 +1,12 @@
-import SweetScroll from 'sweet-scroll';
 
-/* sweetScroll load */
-document.addEventListener("DOMContentLoaded", () => {
-  const sweetScroll = new SweetScroll({ trigger: '.scroll-btn' });
-}, false);
-
-$(document).ready(() => {
+$(document).ready(function() {
   $('.tooltip').tooltipster({
     animation: 'fade',
     trigger: 'click',
     side: 'bottom',
     delay: 200
   });
-  $('.copy-btn').on('click', (e) => {
+  $('.copy-btn').on('click', function(e) {
     e.preventDefault();
     var aux = document.createElement('input');
     aux.setAttribute('value', 'apm install atomic-monokai-pro-syntax');

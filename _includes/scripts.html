@@ -6,6 +6,11 @@ crossorigin="anonymous"></script>
 <script src="{{ '/assets/js/tooltipster.bundle.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}"></script>
 
+/* sweetScroll load */
+document.addEventListener("DOMContentLoaded", () => {
+  const sweetScroll = new SweetScroll({ trigger: '.scroll-btn' });
+}, false);
+
 <!-- Google Analytics -->
 {% if site.google-analytics %}
   <script>
