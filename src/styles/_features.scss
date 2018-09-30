@@ -11,7 +11,12 @@
 }
 
 .project-features {
+  display: flex;
+  align-items:center;
   margin: 20px auto 30px;
+  &:first-child {
+    margin-top: 0;
+  }
   img {
     max-width: 100%;
     height: auto;
@@ -32,18 +37,22 @@
 .contents {
   width: 48%;
   margin-top: -6%;
+  margin-left: 0;
+  margin-right: 1.5em;
   h3 {
     letter-spacing: 0.25px;
     margin-top: 1em;
     margin-bottom: 0.75em;
   }
   @media only screen and (min-width: $cut) {
-    float: left;
+    // float: left;
     // margin-left: 0;
   }
   &.right {
     @media only screen and (min-width: $cut) {
-      float: right;
+      // float: right;
+      margin-left: 1.5em;
+      margin-right: 0;
     }
   }
 }
@@ -59,22 +68,22 @@
 
 .images-right {
   @media only screen and (min-width: $cut) {
-    float: right;
+    // float: right;
   }
   img {
     @media only screen and (min-width: $cut) {
-      float: right;
+      // float: right;
     }
   }
 }
 
 .images-left {
   @media only screen and (min-width: $cut) {
-    float: left;
+    // float: left;
   }
   img {
     @media only screen and (min-width: $cut) {
-      float: left;
+      // float: left;
     }
   }
 }
@@ -85,7 +94,9 @@
   color: $syntax-bg;
   text-align: center;
   text-decoration: none;
-  width: 100px;
+  white-space: nowrap;
+  // width: 100px;
+  width: max-content;
   border: 2px solid $syntax-mono;
   border-radius: 12px;
   margin: 18px 0 10px;

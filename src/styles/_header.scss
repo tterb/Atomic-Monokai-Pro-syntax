@@ -8,6 +8,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  @include breakpoint(medium) {
+    
+  }
+  @include breakpoint(small) {
+    min-height: 75vh !important;
+  }
 }
 
 @keyframes bounce {
@@ -28,7 +34,8 @@
   z-index: 1;
   h1 {
     width: 60% !important;
-    margin: 1em auto 0.55em;
+    // margin: 1em auto 0.55em;
+    margin: 5vh auto 2.5vh;
     padding-top: 0 !important;
   }
   .site-title {
@@ -55,6 +62,9 @@
     width: 85%;
     height: auto;
     margin:1em auto 0;
+  }
+  @include breakpoint(medium) {
+    top: 35% !important;
   }
 }
 
