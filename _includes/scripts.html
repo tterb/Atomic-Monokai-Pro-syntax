@@ -5,11 +5,12 @@ crossorigin="anonymous"></script>
 <script src="{{ '/assets/js/sweet-scroll.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/assets/js/tooltipster.bundle.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}"></script>
-
-/* sweetScroll load */
+<!-- sweetScroll load -->
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const sweetScroll = new SweetScroll({ trigger: '.scroll-btn' });
-}, false);
+}, false); 
+</script>
 
 <!-- Google Analytics -->
 {% if site.google-analytics %}
